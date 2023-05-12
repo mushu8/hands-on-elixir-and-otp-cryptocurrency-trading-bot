@@ -148,7 +148,7 @@ We can now move on to broadcasting trade events:
     ]
     |> Enum.each(fn event ->
       Phoenix.PubSub.broadcast(
-        Core.PubSub,
+        Streamer.PubSub,
         "TRADE_EVENTS:#{symbol}",
         event
       )
