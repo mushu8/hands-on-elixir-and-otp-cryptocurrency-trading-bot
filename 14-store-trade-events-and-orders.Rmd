@@ -760,7 +760,7 @@ We can see that we are querying the database for a list of `topic`s(not symbols)
 
 
 
-The `start_worker/1` is where the `Registry` will shine as we won't need to check is there already a process running for that topic - we can leave that check to the `Registry`. If there's a process already running for that topic it will just return a tuple starting with `:error` atom:
+The `start_worker/1` is where the `Registry` will shine as we won't need to check if there is already a process running for that topic - we can leave that check to the `Registry`. If there's a process already running for that topic it will just return a tuple starting with `:error` atom:
 
 ```{r, engine = 'elixir', eval = FALSE}
   # /apps/data_warehouse/lib/data_warehouse/subscriber/dynamic_supervisor.ex
