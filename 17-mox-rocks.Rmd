@@ -49,7 +49,7 @@ end
 
 The above module would satisfy the PubSub's functionality required by the `Naive.Trader` module, but this solution comes with a couple of drawbacks:
 
-- it doesn't the passed values. It just ignores them, which is a missed opportunity to confirm that the PubSub module was called with the expected values.
+- it doesn't read the passed values. It just ignores them, which is a missed opportunity to confirm that the PubSub module was called with the expected values.
 - we can't define a custom implemention specific to test. This is possible by extending the implemention with test related returns(hack!)
 
 Using the `mox` module would fix both of the problems mentioned above. With the `mox` module we can define add-hoc function implemention per test:
